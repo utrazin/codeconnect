@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>CodeConnect</title>
+</head>
+
+<body>
+    <aside>
+        <nav>
+            <ul class="lista-links">
+                <img src="./img/Logo.svg" alt="Logo codeconnect">
+                <li>
+                    <a href="#" class="link-destaque">Publicar</a>
+                </li>
+                <li>
+                    <a href="sobre.html">
+                        <img src="./img/info.svg">
+                        Sobre
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/enzo-dutra/" target="_blank">
+                        <img src="./img/linkedin.png" style="width: 55px;">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/utrazin" target="_blank">
+                        <img src="./img/github-white-icon.svg" style="width: 55px;">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <span class="info-icon"><img src="img/round-information-outline-white-icon.svg" alt="Info Tooltip"
+                style="width: 20px;">
+            <span class="info-icon-texto">O sistema utiliza uma simulação interna de sucesso e falha.
+                Cada envio do formulário gera um resultado aleatório, com probabilidade igual (50%) para cada
+                cenário.</span>
+        </span>
+        <div class="container-upper">
+            <div class="container-upload-imagem">
+                <h2>Novo Projeto</h2>
+                <div class="container-imagem">
+                    <img src="./img/without-image.png" alt="" class="main-imagem">
+                </div>
+                <button id="upload-btn">Carregar imagem</button>
+                <input type="file" id="image-upload" accept="image/*" style="display: none;" required>
+                <div class="container-imagem-nome" style="display: none;">
+                    <p></p>
+                    <img src="img/close.svg" id="remover-imagem">
+                </div>
+            </div>
+            <div class="container-descricao">
+                <h2>Novo Projeto</h2>
+                <form action="">
+                    <div>
+                        <label for="nome">Nome do Projeto</label>
+                        <input type="text" id="nome" name="nome" required oninput={limparErroCampo(this)}>
+                    </div>
+                    <div>
+                        <label for="descricao">Descricao</label>
+                        <textarea id="descricao" name="descricao" required oninput={limparErroCampo(this)}></textarea>
+                    </div>
+                    <div id="container-tags">
+                        <label for="categoria">Tags</label>
+                        <input type="text" id="input-tags" name="categoria" maxlength="25">
+                    </div>
+                    <ul class="lista-tags" id="lista-tags">
+                    </ul>
+                    <div class="container-botoes">
+                        <button class="botao-descartar">Limpar</button>
+                        <button class="botao-publicar-button">
+                            <div class="botao-publicar-texto">Publicar</div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="container-projetos">
+            <h2 id="seus-projetos">Seus Projetos</h2>
+        </div>
+    </main>
+
+
+    <script src="scripts.js"></script>
+    <script src="projetos.js"></script>
+</body>
+
+</html>
