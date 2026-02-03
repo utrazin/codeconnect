@@ -233,6 +233,10 @@ textarea {
   position: relative;
 }
 
+.container-upload-imagem {
+  max-width: 468px;
+}
+
 .container-upload-imagem button::after {
   background-image: url("./img/upload.svg");
 }
